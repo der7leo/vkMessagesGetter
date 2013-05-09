@@ -15,7 +15,7 @@ def getFirstNodeInElementByTagName(xmlObject, tagname):
     return xmlObject.getElementsByTagName(tagname)[0].childNodes[0]
 
 class VkNetworking:
-    # clientid=3625158 - id of registered
+    # clientid=3625158 - id of registered by me application on vk.com
     login_url = 'https://oauth.vk.com/authorize?client_id=3625158'\
                 '&scope=messages&redirect_uri=https://oauth.vk.com/blank.html'\
                 '&display=wap&response_type=token'

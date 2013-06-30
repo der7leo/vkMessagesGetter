@@ -35,7 +35,9 @@ class parser:
             """Gets text of message and replaces special symbols to readable"""
             rdic = {"<br>": "\n",
                     "&lt": "<",
-                    "&gt": ">"}
+                    "&gt": ">",
+                    "&amp;": "&",
+                    "&quot": "\""}
             try:
                 text = message['body'].encode('utf-8')
             except:

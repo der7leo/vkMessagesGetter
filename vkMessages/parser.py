@@ -1,4 +1,5 @@
 import time
+import HTMLParser
 
 class parser:
     """Working with messages printing"""
@@ -32,21 +33,15 @@ class parser:
             return attachmentsString
 
     def getMessageBody(self, message):
-            """Gets text of message and replaces special symbols to readable"""
-            rdic = {"<br>": "\n",
-                    "&lt": "<",
-                    "&gt": ">",
-                    "&amp;": "&",
-                    "&quot": "\""}
+            """Gets text of message and replaces special HTML symbols- to readable"""
+            h = HTMLParser.HTMLParser()
             try:
-                text = message['body'].encode('utf-8')
+                # replacing special HTML symbols
+                text = h.unescape(message['body']).replace('<br>', '\n')
             except:
                 return ""
-
-            for (symb, rsymb) in zip(rdic.keys(), rdic.values()):
-                text = text.replace(symb, rsymb)
-
-            return text + "\n"
+            
+            return text.encode('utf-8') + "\n"
 
     def isDatesDifferent(self, date_a, date_b):
         """Defines, is dates (day, month, year) different"""

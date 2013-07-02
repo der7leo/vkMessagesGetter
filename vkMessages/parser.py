@@ -59,7 +59,7 @@ class parser:
             if self.isDatesDifferent(prevDate, messageDate):
                 text += time.strftime("\n%d/%m/%Y\n", messageDate)
 
-            if not (prevUid == messageUid) or self.isDatesDifferent(prevDate, messageDate):
+            if (prevUid != messageUid) or self.isDatesDifferent(prevDate, messageDate):
                 text += people[messageUid][0] + ': '
 
             try:

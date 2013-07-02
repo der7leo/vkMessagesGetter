@@ -13,7 +13,7 @@ keys:
    -f, --file - name of file, where will be messages after download
    -h, --help - print this string
 
-example: EngParse.py -email nyan@example.org -userid 123456 -file messages.txt
+example: EngParse.py --email nyan@example.org --userid 123456 --file messages.txt
 """
 
 def parseCmdLine():

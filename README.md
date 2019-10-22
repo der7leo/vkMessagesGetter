@@ -1,5 +1,6 @@
 vkMessagesGetter
 ================
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 vkMessagesGetter - a script, that downloads
 all messages with any user from vk.com

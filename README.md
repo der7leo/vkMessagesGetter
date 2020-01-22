@@ -10,4 +10,4 @@ Requires mechanize library
 
 Uses vk-api and oauth for getting messages
 
-Autor: Artem Zyryanov (der7leo@gmail.com)
+Author: Artem Zyryanov (netsuileo@gmail.com)
